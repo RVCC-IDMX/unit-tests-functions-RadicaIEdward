@@ -16,9 +16,9 @@
  * example: 'Buzz Lightyear' returns 'Lightyear, Buzz'
  */
 function nameShuffle(str) {
-  // write your code here & return value
+  const array = str.split(' ');
+  return (`${array[1]}, ${array[0]}`);
 }
-
 /**
  * returns true if a pair of strings is a "strange pair",
  * and false otherwise.
@@ -34,7 +34,10 @@ function nameShuffle(str) {
  * example: '&', '&' returns true
  */
 function isStrangePair(str1, str2) {
-  // write your code here & return value
+  if (str1.charAt(0) === str2.charAt(str2.length - 1)) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -78,5 +81,5 @@ module.exports = {
   isStrangePair,
   convertToDecimal,
   checkSameSum,
-  saveLogin
+  saveLogin,
 };
